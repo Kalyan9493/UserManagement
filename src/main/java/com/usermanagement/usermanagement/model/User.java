@@ -22,7 +22,7 @@ public class User {
     @Column(name = "country_code")
     private String countryCode;
     @Column(name = "mobile_number")
-    private Integer mobileNumber;
+    private Long mobileNumber;
     @Column(name = "password")
     private String password;
 }
