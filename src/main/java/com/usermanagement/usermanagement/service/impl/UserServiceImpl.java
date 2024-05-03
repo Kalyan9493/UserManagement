@@ -1,5 +1,6 @@
 package com.usermanagement.usermanagement.service.impl;
 
+import com.usermanagement.usermanagement.dto.LoginDTO;
 import com.usermanagement.usermanagement.dto.UserDTO;
 import com.usermanagement.usermanagement.handlers.UserException;
 import com.usermanagement.usermanagement.model.User;
@@ -19,7 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
-    private BCryptPasswordEncoder passwordEncoder;
+    private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     private ModelMapper modelMapper = new ModelMapper();
     private static final String COUNTRY_CODE_REGEX = "^\\+[1-9]\\d{0,2}$"; // Regular expression for country codes with international dialing code
     private static final String EMAIL_REGEX = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
@@ -40,6 +41,17 @@ public class UserServiceImpl implements UserService {
         Matcher matcher = pattern.matcher(countryCode);
         return matcher.matches();
     }
+    public static boolean isNumeric(String str) {
+        String regex = "^\\d+$";
+        return str.matches(regex);
+    }
+
+    public static boolean isEmail(String str) {
+        String regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
     public static boolean validateUser(Optional<User> user) {
         if(!user.isPresent()){
             return false;
@@ -54,24 +66,55 @@ public class UserServiceImpl implements UserService {
             if(userObj.getFirstName() == null || userObj.getLastName() == null){
                 throw new UserException(400, "First name and last name are required");
             }
-            if(userObj.getMobileNumber() == null || isValidMobileNumber(String.valueOf(userObj.getMobileNumber()))){
+            if(userObj.getMobileNumber() == null || !isValidMobileNumber(String.valueOf(userObj.getMobileNumber()))){
                 throw new UserException(400, "Mobile number is incorrect");
             }
             if(userObj.getPassword() == null){
                 throw new UserException(400, "Password is required");
             }
         });
+
         return true;
     }
     @Override
     public UserDTO save(User user) {
 
-        UserDTO userDTO = new UserDTO();
         if(validateUser(Optional.ofNullable(user))){
             user.setPassword(passwordEncoder.encode(user.getPassword()));
+            User existingUser = userRepository.findUserByEmailOrMobile(user.getEmailId(), user.getMobileNumber());
+            if(existingUser != null){
+                throw new UserException(409,"User already exists with this email or mobile number");
+            }
             user = userRepository.save(user);
         }
-        userDTO = modelMapper.map(user,UserDTO.class);
+        UserDTO userDTO = modelMapper.map(user,UserDTO.class);
+        return userDTO;
+    }
+
+    @Override
+    public UserDTO getUser(Long id) {
+        if(id == null){
+            throw new UserException(400,"UserId is required");
+        }
+        Optional<User> user = userRepository.findById(id);
+        UserDTO userDTO = modelMapper.map(Optional.ofNullable(user),UserDTO.class);
+        return userDTO;
+    }
+
+    @Override
+    public UserDTO login(LoginDTO loginDTO) {
+
+        if(loginDTO == null || loginDTO.getUsername() == null || loginDTO.getPassword() == null) {
+            throw new UserException(400, "Email/Mobile and Password are required");
+        }
+        String emailId = isEmail(loginDTO.getUsername()) ? loginDTO.getUsername() : null;
+        Long mobileNumber = isNumeric(loginDTO.getUsername()) ? Long.parseLong(loginDTO.getUsername()) : null;
+        String password = passwordEncoder.encode(loginDTO.getPassword());
+        User user = userRepository.login(emailId, mobileNumber, password);
+        if(user == null){
+            throw new UserException(404, "User not found");
+        }
+        UserDTO userDTO = modelMapper.map(Optional.ofNullable(user),UserDTO.class);
         return userDTO;
     }
 }

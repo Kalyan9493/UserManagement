@@ -10,6 +10,6 @@ public class UserDTO {
     private String lastName;
     private String emailId;
     private String countryCode;
-    private Integer mobileNumber;
+    private Long mobileNumber;
 
 }
