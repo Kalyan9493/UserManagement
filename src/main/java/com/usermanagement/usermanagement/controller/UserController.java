@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 public class UserController {
@@ -28,11 +30,6 @@ public class UserController {
             ex.printStackTrace();
             return new ResponseDTO("error", HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage());
         }
-    }
-
-    @GetMapping("/user")
-    public String example(){
-        return "Hello World";
     }
 
     @GetMapping("/user/{id}")
@@ -54,6 +51,15 @@ public class UserController {
             return new ResponseDTO("success", HttpStatus.OK.value(), userDTO);
         }catch(UserException ex){
             return new ResponseDTO("error", ex.getCode(), ex.getMessage());
+        }catch (Exception ex){
+            return new ResponseDTO("error", HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage());
+        }
+    }
+    @GetMapping("/user")
+    public ResponseDTO getAllUsers(){
+        try {
+            List<UserDTO> userDTOS = userService.getAllUsers();
+            return new ResponseDTO("success", HttpStatus.OK.value(), userDTOS);
         }catch (Exception ex){
             return new ResponseDTO("error", HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage());
         }

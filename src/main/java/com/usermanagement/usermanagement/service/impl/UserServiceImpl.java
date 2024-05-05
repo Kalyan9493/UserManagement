@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -109,12 +111,27 @@ public class UserServiceImpl implements UserService {
         }
         String emailId = isEmail(loginDTO.getUsername()) ? loginDTO.getUsername() : null;
         Long mobileNumber = isNumeric(loginDTO.getUsername()) ? Long.parseLong(loginDTO.getUsername()) : null;
-        String password = passwordEncoder.encode(loginDTO.getPassword());
-        User user = userRepository.login(emailId, mobileNumber, password);
-        if(user == null){
+        User user = userRepository.findUserByEmailOrMobile(emailId, mobileNumber);
+        if(user == null) {
             throw new UserException(404, "User not found");
+        }else {
+            if(!passwordEncoder.matches(loginDTO.getPassword(), user.getPassword())) {
+                throw new UserException(401, "Username or password is incorrect");
+            }
         }
         UserDTO userDTO = modelMapper.map(Optional.ofNullable(user),UserDTO.class);
         return userDTO;
     }
+
+    @Override
+    public List<UserDTO> getAllUsers() {
+        List<User> users = userRepository.findAll();
+        List<UserDTO> userDTOS = new ArrayList<>();
+        for (User user: users) {
+            UserDTO userDTO = modelMapper.map(user, UserDTO.class);
+            userDTOS.add(userDTO);
+        }
+        return userDTOS;
+    }
+
 }
