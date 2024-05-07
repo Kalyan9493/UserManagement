@@ -3,6 +3,7 @@ package com.usermanagement.usermanagement.service.impl;
 import com.usermanagement.usermanagement.dto.LoginDTO;
 import com.usermanagement.usermanagement.dto.UserDTO;
 import com.usermanagement.usermanagement.handlers.UserException;
+import com.usermanagement.usermanagement.jwt.JWTService;
 import com.usermanagement.usermanagement.model.User;
 import com.usermanagement.usermanagement.repository.UserRepository;
 import com.usermanagement.usermanagement.service.UserService;
@@ -22,6 +23,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private JWTService jwtService;
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     private ModelMapper modelMapper = new ModelMapper();
     private static final String COUNTRY_CODE_REGEX = "^\\+[1-9]\\d{0,2}$"; // Regular expression for country codes with international dialing code
@@ -120,6 +123,7 @@ public class UserServiceImpl implements UserService {
             }
         }
         UserDTO userDTO = modelMapper.map(Optional.ofNullable(user),UserDTO.class);
+        userDTO.setToken(jwtService.generateToken(user));
         return userDTO;
     }
 

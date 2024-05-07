@@ -11,5 +11,6 @@ public class UserDTO {
     private String emailId;
     private String countryCode;
     private Long mobileNumber;
+    private String token;
 
 }
