@@ -90,5 +90,22 @@ public class UserController {
             logger.trace("getAllUsers() method end");
         }
     }
+    @PutMapping("/user")
+    public ResponseDTO updateUser(@RequestBody UserDTO userDTO) {
+        logger.trace("updateUser() method start");
+        try {
+            UserDTO updatedUser = userService.updateUser(userDTO);
+            logger.info("update user successfully");
+            return new ResponseDTO("success", HttpStatus.OK.value(), updatedUser);
+        }catch(UserException ex){
+            logger.error("Exception while updating user " + ex.getMessage());
+            return new ResponseDTO("error", ex.getCode(), ex.getMessage());
+        }catch (Exception ex){
+            logger.error("Exception while updating user " + ex.getMessage());
+            return new ResponseDTO("error", HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage());
+        }finally {
+            logger.trace("updateUser() method end");
+        }
+    }
 
 }

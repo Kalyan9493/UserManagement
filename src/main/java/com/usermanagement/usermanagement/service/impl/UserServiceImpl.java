@@ -138,4 +138,44 @@ public class UserServiceImpl implements UserService {
         return userDTOS;
     }
 
+    @Override
+    public UserDTO updateUser(UserDTO userDTO) {
+
+        if(userDTO == null) {
+            throw new UserException(400, "UserDetails required for update");
+        }
+        Optional<User> user = userRepository.findById(userDTO.getUserId());
+        if(!user.isPresent()) {
+            throw new UserException(404, "user not found");
+        }
+        user.get().setFirstName(userDTO.getFirstName() != null ? userDTO.getFirstName() : user.get().getFirstName());
+        user.get().setLastName(userDTO.getLastName() != null ? userDTO.getLastName() : user.get().getLastName());
+        if(userDTO.getCountryCode() != null) {
+            if(!isValidCountryCode(userDTO.getCountryCode())) {
+                 throw new UserException(400, "Invalid country code");
+            }
+            user.get().setCountryCode(userDTO.getCountryCode() != null ? userDTO.getCountryCode() : user.get().getCountryCode());
+        }
+        if(userDTO.getMobileNumber() != null) {
+            if(!isValidMobileNumber(userDTO.getMobileNumber().toString())) {
+                throw new UserException(400, "Invalid mobile number");
+            }
+            user.get().setMobileNumber(userDTO.getMobileNumber() != null ? userDTO.getMobileNumber() : user.get().getMobileNumber());
+        }
+        if(userDTO.getEmailId() != null && !userDTO.getEmailId().equals(user.get().getEmailId())) {
+            if(!isValidEmail(userDTO.getEmailId())){
+                throw new UserException(400, "Invalid EmailId");
+            }
+            User existingUser = userRepository.findUserByEmailOrMobile(userDTO.getEmailId(), null);
+            if(existingUser != null) {
+                throw new UserException(400, "User already exists with this email");
+            }
+            user.get().setEmailId(userDTO.getEmailId());
+        }
+        User updatedUser = userRepository.save(user.get());
+        userDTO = modelMapper.map(updatedUser, UserDTO.class);
+
+        return userDTO;
+    }
+
 }
