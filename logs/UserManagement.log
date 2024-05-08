@@ -1,0 +1,410 @@
+2024-05-07 19:51:15.885 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 16032 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 19:51:15.887 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 19:51:16.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 19:51:16.773 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+2024-05-07 19:51:17.565 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 19:51:17.571 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 19:51:17.572 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 19:51:17.573 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 19:51:17.714 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 19:51:17.715 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1780 ms
+2024-05-07 19:51:17.848 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 19:51:17.858 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 19:51:18.110 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 19:51:18.148 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 19:51:18.215 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.022s)
+2024-05-07 19:51:18.228 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 19:51:18.230 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 19:51:18.369 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 19:51:18.429 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 19:51:18.579 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 19:51:18.726 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 19:51:19.182 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 19:51:19.190 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 19:51:19.619 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 19:51:20.101 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 221b7a8c-7f8e-4a6a-a907-91ec68044a0e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 19:51:20.258 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34947355, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62ad5f35, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b826482, org.springframework.security.web.header.HeaderWriterFilter@2c8f7d6a, org.springframework.web.filter.CorsFilter@5e6ad84c, org.springframework.security.web.authentication.logout.LogoutFilter@74471600, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@789f5552, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@153c69bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8929865, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4117e0c9, org.springframework.security.web.session.SessionManagementFilter@60ae950f, org.springframework.security.web.access.ExceptionTranslationFilter@156d7556, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66297b63]
+2024-05-07 19:51:20.526 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 19:51:20.550 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 19:51:20.801 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 5.278 seconds (JVM running for 5.864)
+2024-05-07 20:10:37.994 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:10:37.997 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:10:38.013 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:10:45.216 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 26416 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:10:45.220 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:10:46.247 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:10:46.293 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:10:47.363 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:10:47.371 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:10:47.374 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:10:47.375 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:10:47.647 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:10:47.647 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2365 ms
+2024-05-07 20:10:47.907 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:10:47.927 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:10:48.385 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:10:48.457 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:10:48.566 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.051s)
+2024-05-07 20:10:48.597 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:10:48.600 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:10:48.826 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:10:48.934 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:10:49.137 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:10:49.260 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:10:49.772 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:10:49.780 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:10:50.467 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:10:51.129 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b6a13a19-9286-4d49-b656-b8548b5c5c46
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:10:51.278 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d3c14c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@599fab92, org.springframework.security.web.context.SecurityContextPersistenceFilter@4884350b, org.springframework.security.web.header.HeaderWriterFilter@6ddc9001, org.springframework.web.filter.CorsFilter@439054a7, org.springframework.security.web.authentication.logout.LogoutFilter@125c03d3, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@755a90a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66ad7167, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b235623, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fc1eee5, org.springframework.security.web.session.SessionManagementFilter@2c56e044, org.springframework.security.web.access.ExceptionTranslationFilter@d082916, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ad80206]
+2024-05-07 20:10:51.533 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:10:51.561 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:10:51.820 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 7.021 seconds (JVM running for 7.622)
+2024-05-07 20:13:02.047 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:13:02.047 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:13:02.047 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-05-07 20:13:02.693 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [455] milliseconds.
+2024-05-07 20:18:10.333 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:18:10.336 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:18:10.356 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:18:15.385 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 21456 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:18:15.394 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:18:16.503 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:18:16.578 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:18:17.550 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:18:17.557 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:18:17.559 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:18:17.559 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:18:17.719 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:18:17.720 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2264 ms
+2024-05-07 20:18:17.895 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:18:17.905 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:18:18.200 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:18:18.244 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:18:18.286 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.017s)
+2024-05-07 20:18:18.297 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:18:18.298 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:18:18.453 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:18:18.518 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:18:18.781 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:18:18.917 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:18:19.388 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:18:19.398 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:18:19.899 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:18:20.360 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9131d9a1-2959-4386-9663-aed786cdb614
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:18:20.526 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@685e5967, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@106387cf, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f7853af, org.springframework.security.web.header.HeaderWriterFilter@1ae2028d, org.springframework.web.filter.CorsFilter@3d3c14c3, org.springframework.security.web.authentication.logout.LogoutFilter@58c93be3, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@103033fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d970881, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14aa2123, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@599fab92, org.springframework.security.web.session.SessionManagementFilter@30b075b9, org.springframework.security.web.access.ExceptionTranslationFilter@6109366a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@301c622d]
+2024-05-07 20:18:20.808 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:18:20.835 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:18:21.273 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 6.306 seconds (JVM running for 7.11)
+2024-05-07 20:18:31.895 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:18:31.896 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:18:31.899 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-05-07 20:18:32.219 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [256] milliseconds.
+2024-05-07 20:20:13.203 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:20:13.206 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:20:13.228 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:20:16.832 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 32704 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:20:16.836 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:20:18.021 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:20:18.844 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 799 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:20:52.089 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:20:52.352 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:20:52.380 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:20:52.384 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:20:57.208 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:20:57.211 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 40302 ms
+2024-05-07 20:21:11.694 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:21:12.049 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:21:24.185 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:21:32.710 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:21:40.242 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:03.987s)
+2024-05-07 20:21:42.030 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:21:42.094 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:22:17.151 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:22:28.001 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:22:59.994 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:23:26.054 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:24:05.597 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:24:06.795 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:25:19.682 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:26:25.969 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 63376753-a78a-4c7b-9472-046db2d3f926
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:26:33.176 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@551976c2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bbd4048, org.springframework.security.web.context.SecurityContextPersistenceFilter@1cc878e6, org.springframework.security.web.header.HeaderWriterFilter@106c73ed, org.springframework.web.filter.CorsFilter@5f815f93, org.springframework.security.web.authentication.logout.LogoutFilter@65528bcf, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@36696821, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44bb6856, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2314f013, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a8e484b, org.springframework.security.web.session.SessionManagementFilter@7a285418, org.springframework.security.web.access.ExceptionTranslationFilter@6aff157e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63767d]
+2024-05-07 20:26:50.914 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:26:51.304 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:27:05.511 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 409.21 seconds (JVM running for 410.05)
+2024-05-07 20:35:28.987 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:35:29.001 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:35:30.056 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1049 ms
+2024-05-07 20:36:10.888 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s256ms238µs200ns).
+2024-05-07 20:36:16.564 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [438] milliseconds.
+2024-05-07 20:40:01.414 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:40:01.417 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:40:01.449 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:40:05.341 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 29372 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:40:05.345 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:40:06.411 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:40:06.479 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:40:07.337 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:40:07.343 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:40:07.345 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:40:07.346 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:40:07.488 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:40:07.488 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2089 ms
+2024-05-07 20:40:07.639 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:40:07.648 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:40:07.970 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:40:08.019 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:40:08.067 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.020s)
+2024-05-07 20:40:08.082 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:40:08.084 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:40:08.233 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:40:08.314 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:40:08.510 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:40:08.627 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:40:09.161 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:40:09.169 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:40:09.670 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:40:10.368 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ccfe24b0-29aa-4920-9f6c-de156187729e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:40:10.638 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fc1eee5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@120661d2, org.springframework.security.web.context.SecurityContextPersistenceFilter@153cf928, org.springframework.security.web.header.HeaderWriterFilter@67201002, org.springframework.web.filter.CorsFilter@36618b3b, org.springframework.security.web.authentication.logout.LogoutFilter@3db3668, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@103033fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53cba89f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ec5d3e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7715d43c, org.springframework.security.web.session.SessionManagementFilter@1f7853af, org.springframework.security.web.access.ExceptionTranslationFilter@259ae1a9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58ec3e8b]
+2024-05-07 20:40:11.068 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:40:11.112 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:40:11.562 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 6.647 seconds (JVM running for 7.34)
+2024-05-07 20:41:18.570 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:41:18.572 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:41:18.573 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-07 20:41:18.778 [http-nio-8080-exec-1] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [146] milliseconds.
+2024-05-07 20:41:46.453 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:41:46.455 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:41:46.475 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:41:51.058 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 31776 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:41:51.062 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:41:52.051 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:41:52.109 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:41:53.075 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:41:53.081 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:41:53.084 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:41:53.084 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:41:53.257 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:41:53.257 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2142 ms
+2024-05-07 20:41:53.399 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:41:53.406 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:41:53.691 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:41:53.730 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:41:53.771 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.017s)
+2024-05-07 20:41:53.781 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:41:53.782 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:41:53.924 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:41:54.005 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:41:54.189 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:41:54.292 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:41:54.807 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:41:54.815 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:41:55.289 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:41:55.884 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4723adc2-5db2-4294-adee-5677a5d41034
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:41:56.160 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3763aafd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16ca4532, org.springframework.security.web.context.SecurityContextPersistenceFilter@14aa2123, org.springframework.security.web.header.HeaderWriterFilter@34f2d3a6, org.springframework.web.filter.CorsFilter@2cc82c83, org.springframework.security.web.authentication.logout.LogoutFilter@7e4a6afd, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@755a90a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@736eb2a2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bab8290, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75a5a912, org.springframework.security.web.session.SessionManagementFilter@4884350b, org.springframework.security.web.access.ExceptionTranslationFilter@1f39b3ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19a799cb]
+2024-05-07 20:41:56.581 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:41:56.616 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:41:56.847 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 6.218 seconds (JVM running for 6.974)
+2024-05-07 20:42:01.595 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:42:01.596 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:42:01.598 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-05-07 20:42:02.014 [http-nio-8080-exec-2] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [277] milliseconds.
+2024-05-07 20:42:02.014 [http-nio-8080-exec-6] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [277] milliseconds.
+2024-05-07 20:42:02.014 [http-nio-8080-exec-3] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [276] milliseconds.
+2024-05-07 20:42:02.015 [http-nio-8080-exec-5] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [277] milliseconds.
+2024-05-07 20:42:02.014 [http-nio-8080-exec-4] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [277] milliseconds.
+2024-05-07 20:42:20.835 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:42:20.837 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:42:20.859 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:42:25.335 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 24972 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:42:25.340 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:42:26.392 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:42:26.461 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:42:27.496 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:42:27.502 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:42:27.504 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:42:27.504 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:42:27.652 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:42:27.652 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2261 ms
+2024-05-07 20:42:27.816 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:42:27.824 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:42:28.118 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:42:28.161 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:42:28.199 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.016s)
+2024-05-07 20:42:28.209 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:42:28.210 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:42:28.424 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:42:28.521 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:42:28.738 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:42:28.853 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:42:29.287 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:42:29.298 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:42:29.749 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:42:30.200 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: a22b5b2a-9d7e-4bf5-8eea-d29f937ec7d9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:42:30.372 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3763aafd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16ca4532, org.springframework.security.web.context.SecurityContextPersistenceFilter@14aa2123, org.springframework.security.web.header.HeaderWriterFilter@34f2d3a6, org.springframework.web.filter.CorsFilter@2cc82c83, org.springframework.security.web.authentication.logout.LogoutFilter@7e4a6afd, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@755a90a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@736eb2a2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6bab8290, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75a5a912, org.springframework.security.web.session.SessionManagementFilter@4884350b, org.springframework.security.web.access.ExceptionTranslationFilter@1f39b3ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19a799cb]
+2024-05-07 20:42:30.716 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:42:30.763 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:42:31.224 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 6.324 seconds (JVM running for 7.055)
+2024-05-07 20:42:36.549 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:42:36.554 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:42:36.558 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-05-07 20:42:51.148 [http-nio-8080-exec-4] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [564] milliseconds.
+2024-05-07 20:45:57.613 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:45:57.616 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:45:57.636 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:46:01.823 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 2516 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:46:01.836 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:46:02.909 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:46:02.966 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:46:03.803 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:46:03.809 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:46:03.811 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:46:03.811 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:46:03.957 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:46:03.957 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2068 ms
+2024-05-07 20:46:04.109 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:46:04.120 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:46:04.500 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:46:04.571 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:46:04.647 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.040s)
+2024-05-07 20:46:04.670 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:46:04.672 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:46:04.934 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:46:04.997 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:46:05.228 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:46:05.353 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:46:05.805 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:46:05.813 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:46:06.259 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:46:07.068 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 01691ad8-9d11-4422-912c-0e6f7f7e9cc9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:46:07.316 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@16ca4532, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cc82c83, org.springframework.security.web.context.SecurityContextPersistenceFilter@7def62d0, org.springframework.security.web.header.HeaderWriterFilter@3da701a1, org.springframework.web.filter.CorsFilter@75a5a912, org.springframework.security.web.authentication.logout.LogoutFilter@c7aac7c, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@62878d7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ec5d3e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a985388, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f3bc119, org.springframework.security.web.session.SessionManagementFilter@53cba89f, org.springframework.security.web.access.ExceptionTranslationFilter@53b579d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d50f682]
+2024-05-07 20:46:07.573 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:46:07.595 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:46:07.857 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 6.431 seconds (JVM running for 7.12)
+2024-05-07 20:46:22.573 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:46:22.574 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:46:22.575 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-07 20:48:34.521 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:48:34.524 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:48:34.553 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:48:38.817 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 29708 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:48:38.821 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:48:39.788 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:48:39.840 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:48:40.833 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:48:40.839 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:48:40.841 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:48:40.841 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:48:40.970 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:48:40.971 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2089 ms
+2024-05-07 20:48:41.134 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:48:41.145 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:48:41.399 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:48:41.448 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:48:41.496 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.021s)
+2024-05-07 20:48:41.513 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:48:41.514 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:48:41.679 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:48:41.723 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:48:41.883 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:48:42.010 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:48:42.553 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:48:42.560 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:48:43.024 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:48:43.506 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4c5dda0f-db8e-4db0-956f-32e06f7d0c2a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:48:43.668 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b9cfc19, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@765d67dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ddc5a75, org.springframework.security.web.header.HeaderWriterFilter@30b075b9, org.springframework.web.filter.CorsFilter@2e68bd3d, org.springframework.security.web.authentication.logout.LogoutFilter@14c7ab73, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@62878d7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bab8290, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1978eab7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fda92e0, org.springframework.security.web.session.SessionManagementFilter@736eb2a2, org.springframework.security.web.access.ExceptionTranslationFilter@17d25e1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7baea18b]
+2024-05-07 20:48:43.921 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:48:43.940 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:48:44.197 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 5.793 seconds (JVM running for 6.456)
+2024-05-07 20:48:53.987 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:48:53.988 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:48:53.990 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-07 20:51:37.459 [http-nio-8080-exec-5] INFO  c.u.u.controller.UserController - User logged in successfully
+2024-05-07 20:52:10.259 [http-nio-8080-exec-2] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [443] milliseconds.
+2024-05-07 20:55:15.410 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:55:15.413 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-07 20:55:15.427 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-07 20:55:19.785 [main] INFO  c.u.u.UserManagementApplication - Starting UserManagementApplication using Java 11.0.16.1 on DESKTOP-4K3E0FB with PID 23804 (C:\desktop\Personal Projects\UserManagement\target\classes started by Kalyan Reddy in C:\desktop\Personal Projects\usermanagement)
+2024-05-07 20:55:19.789 [main] INFO  c.u.u.UserManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-07 20:55:20.873 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07 20:55:20.921 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+2024-05-07 20:55:21.802 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-05-07 20:55:21.808 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:55:21.810 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-07 20:55:21.810 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-05-07 20:55:21.939 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-07 20:55:21.939 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2095 ms
+2024-05-07 20:55:22.086 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.5.4 by Redgate
+2024-05-07 20:55:22.096 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-07 20:55:22.450 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-07 20:55:22.492 [main] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:mysql://localhost:3306/usermanagement (MySQL 8.0)
+2024-05-07 20:55:22.545 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.018s)
+2024-05-07 20:55:22.553 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema `usermanagement`: 1
+2024-05-07 20:55:22.554 [main] INFO  o.f.core.internal.command.DbMigrate - Schema `usermanagement` is up to date. No migration necessary.
+2024-05-07 20:55:22.727 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07 20:55:22.779 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-05-07 20:55:22.932 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-05-07 20:55:23.051 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-05-07 20:55:23.481 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-07 20:55:23.489 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07 20:55:24.131 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07 20:55:24.808 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: b5863de5-813b-46cd-b62f-599c7f1a3ddd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-05-07 20:55:24.975 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66e44f9f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79f82fc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@3bea478e, org.springframework.security.web.header.HeaderWriterFilter@14aa2123, org.springframework.web.filter.CorsFilter@554db19d, org.springframework.security.web.authentication.logout.LogoutFilter@5af8ef61, com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter@4379fe2a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ab8c972, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fb555e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bb896e9, org.springframework.security.web.session.SessionManagementFilter@1978eab7, org.springframework.security.web.access.ExceptionTranslationFilter@53cba89f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@798d8247]
+2024-05-07 20:55:25.236 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-07 20:55:25.264 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07 20:55:25.556 [main] INFO  c.u.u.UserManagementApplication - Started UserManagementApplication in 6.193 seconds (JVM running for 6.896)
+2024-05-07 20:55:37.446 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07 20:55:37.448 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-07 20:55:37.449 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-05-07 20:56:12.806 [http-nio-8080-exec-8] INFO  c.u.u.controller.UserController - User logged in successfully
+2024-05-07 20:56:54.171 [http-nio-8080-exec-2] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [459] milliseconds.
+2024-05-07 20:57:30.872 [http-nio-8080-exec-7] INFO  c.u.u.controller.UserController - fetched all users successfully

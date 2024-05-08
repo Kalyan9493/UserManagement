@@ -29,7 +29,11 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         final String authHeader = request.getHeader("Authorization");
         final String jwtToken;
         final String userName;
-
+        if (request.getRequestURI().startsWith("/swagger") || request.getRequestURI().startsWith("/v2/api-docs")) {
+            // Allow access without authentication
+            filterChain.doFilter(request, response);
+            return;
+        }
         if(authHeader == null || !authHeader.startsWith("Bearer ")){
             filterChain.doFilter(request, response);
             return;
