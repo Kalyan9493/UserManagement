@@ -4,11 +4,19 @@ import com.usermanagement.usermanagement.dto.LoginDTO;
 import com.usermanagement.usermanagement.dto.UserDTO;
 import com.usermanagement.usermanagement.handlers.UserException;
 import com.usermanagement.usermanagement.jwt.JWTService;
+import com.usermanagement.usermanagement.model.Role;
 import com.usermanagement.usermanagement.model.User;
+import com.usermanagement.usermanagement.model.UserRole;
 import com.usermanagement.usermanagement.repository.UserRepository;
+import com.usermanagement.usermanagement.repository.UserRoleRepository;
 import com.usermanagement.usermanagement.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,10 +27,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private UserRoleRepository userRoleRepository;
     @Autowired
     private JWTService jwtService;
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -91,6 +101,10 @@ public class UserServiceImpl implements UserService {
                 throw new UserException(409,"User already exists with this email or mobile number");
             }
             user = userRepository.save(user);
+            UserRole userRole = new UserRole();
+            userRole.setUserId(user.getUserId());
+            userRole.setRoleId(1L);
+            userRoleRepository.save(userRole);
         }
         UserDTO userDTO = modelMapper.map(user,UserDTO.class);
         return userDTO;
@@ -178,4 +192,17 @@ public class UserServiceImpl implements UserService {
         return userDTO;
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findUserByEmailOrMobile(username, null);
+        if (user == null) {
+            throw new UsernameNotFoundException("User not found with username: " + username);
+        }
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        for (Role role : user.getRoles()) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getName()));
+        }
+        return new org.springframework.security.core.userdetails.User(
+                user.getEmailId(), user.getPassword(), authorities);
+    }
 }

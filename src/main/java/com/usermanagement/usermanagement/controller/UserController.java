@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -43,6 +44,7 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseDTO getUserDetails(@PathVariable Long id){
         logger.trace("getUserDetails() method start");
         try{
@@ -78,6 +80,7 @@ public class UserController {
         }
     }
     @GetMapping("/user")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseDTO getAllUsers(){
         logger.trace("getAllUsers() method start");
         try {
@@ -91,6 +94,7 @@ public class UserController {
         }
     }
     @PutMapping("/user")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseDTO updateUser(@RequestBody UserDTO userDTO) {
         logger.trace("updateUser() method start");
         try {

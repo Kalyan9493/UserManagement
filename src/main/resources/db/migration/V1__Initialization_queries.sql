@@ -12,3 +12,22 @@ CREATE TABLE user (
   `password` LONGTEXT NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE INDEX `user_id_UNIQUE` (`user_id` ASC) VISIBLE);
+
+
+
+CREATE TABLE role (
+  `role_id` BIGINT(10) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`role_id`));
+
+INSERT INTO role (`role_id`, `name`) VALUES ('1', 'USER');
+INSERT INTO role (`role_id`, `name`) VALUES ('2', 'ADMIN');
+
+
+
+CREATE TABLE `user_role` (
+  `user_role_id` BIGINT(10) NOT NULL AUTO_INCREMENT,
+  `user_id` BIGINT(10) NULL,
+  `role_id` BIGINT(10) NULL,
+   PRIMARY KEY (`user_role_id`),
+   UNIQUE INDEX `user_role_id_UNIQUE` (`user_role_id` ASC) VISIBLE);
