@@ -19,7 +19,6 @@ public class Answer {
     private String answerText;
 
     @Column(name = "is_correct")
-    @JsonIgnore
     private boolean isCorrect;
 
     @ManyToOne
