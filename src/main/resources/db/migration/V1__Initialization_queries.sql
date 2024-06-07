@@ -10,6 +10,11 @@ CREATE TABLE user (
   `country_code` VARCHAR(5) NOT NULL,
   `mobile_number` BIGINT(12) NOT NULL,
   `password` LONGTEXT NOT NULL,
+  `created_by` VARCHAR(100) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `updated_by` VARCHAR(100) NULL,
+  `updated_at` TIMESTAMP NULL,
+  `is_deleted` CHAR(1) NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE INDEX `user_id_UNIQUE` (`user_id` ASC) VISIBLE);
 

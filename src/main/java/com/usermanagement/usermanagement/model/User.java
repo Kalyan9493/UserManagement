@@ -1,5 +1,6 @@
 package com.usermanagement.usermanagement.model;
 
+import com.usermanagement.usermanagement.utility.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import java.util.Set;
 @Entity
 @Table(name = "user")
 @Data
-public class User {
+public class User extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +28,7 @@ public class User {
     private Long mobileNumber;
     @Column(name = "password")
     private String password;
+
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

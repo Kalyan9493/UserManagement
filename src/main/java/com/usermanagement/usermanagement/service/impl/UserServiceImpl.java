@@ -2,7 +2,7 @@ package com.usermanagement.usermanagement.service.impl;
 
 import com.usermanagement.usermanagement.dto.LoginDTO;
 import com.usermanagement.usermanagement.dto.UserDTO;
-import com.usermanagement.usermanagement.handlers.UserException;
+import com.usermanagement.usermanagement.exceptionhandlers.UserException;
 import com.usermanagement.usermanagement.jwt.JWTService;
 import com.usermanagement.usermanagement.model.Role;
 import com.usermanagement.usermanagement.model.User;
@@ -14,6 +14,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -204,5 +205,15 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         }
         return new org.springframework.security.core.userdetails.User(
                 user.getEmailId(), user.getPassword(), authorities);
+    }
+
+    @Override
+    public String getCurrentUsername() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (principal instanceof UserDetails) {
+            return ((UserDetails) principal).getUsername();
+        } else {
+            return principal.toString();
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.usermanagement.usermanagement.handlers;
+package com.usermanagement.usermanagement.exceptionhandlers;
 
 import lombok.Data;
 

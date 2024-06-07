@@ -1,7 +1,6 @@
 package com.usermanagement.usermanagement.config;
 
 import com.usermanagement.usermanagement.jwt.JWTAuthenticationFilter;
-import com.usermanagement.usermanagement.service.UserService;
 import com.usermanagement.usermanagement.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/actuator/**").permitAll()
-                .antMatchers("/api/user/login", "/api/user/save", "/swagger-ui/**", "/swagger-resources/**", "/v2/api-docs", "/webjars/**").permitAll()
+                .antMatchers("/api/user/login", "/api/user/save", "/swagger-ui/**", "/swagger-resources/**", "/v3/api-docs/**", "/webjars/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)

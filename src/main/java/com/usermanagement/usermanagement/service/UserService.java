@@ -14,4 +14,5 @@ public interface UserService {
     public UserDTO login(LoginDTO loginDTO);
     public List<UserDTO> getAllUsers();
     public UserDTO updateUser(UserDTO userDTO);
+    public String getCurrentUsername();
 }
