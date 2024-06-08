@@ -17,7 +17,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -117,7 +116,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             throw new UserException(400,"UserId is required");
         }
         Optional<User> user = userRepository.findById(id);
-        UserDTO userDTO = modelMapper.map(Optional.ofNullable(user),UserDTO.class);
+        UserDTO userDTO = modelMapper.map(user.orElseThrow(() -> new UserException(404,"User Not Found")),UserDTO.class);
         return userDTO;
     }
 
@@ -137,7 +136,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
                 throw new UserException(401, "Username or password is incorrect");
             }
         }
-        UserDTO userDTO = modelMapper.map(Optional.ofNullable(user),UserDTO.class);
+        UserDTO userDTO = modelMapper.map(user,UserDTO.class);
         userDTO.setToken(jwtService.generateToken(user));
         return userDTO;
     }
@@ -194,10 +193,10 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) {
         User user = userRepository.findUserByEmailOrMobile(username, null);
         if (user == null) {
-            throw new UsernameNotFoundException("User not found with username: " + username);
+            throw new UserException(404,"User not found with username: " + username);
         }
         List<GrantedAuthority> authorities = new ArrayList<>();
         for (Role role : user.getRoles()) {
